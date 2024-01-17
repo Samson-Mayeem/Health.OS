@@ -1,0 +1,6 @@
+@Health.OS.APi_HostAddress = http://localhost:5114
+
+GET {{Health.OS.APi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
