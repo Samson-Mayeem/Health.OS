@@ -4,12 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Health.OS.APi.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
            : base(options)
@@ -25,7 +26,7 @@ namespace Health.OS.APi.Data
 
         public DbSet<Usage> Usage { get; set; }
 
-        public DbSet<User> Staff { get; set; }
+        //public DbSet<User> Staff { get; set; }
 
         public DbSet<Appointment> Appointment { get; set; }
 

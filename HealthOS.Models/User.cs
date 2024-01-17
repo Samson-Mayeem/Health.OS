@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HealthOS.Models
 {
-    public class User : IdentityDbContext
+    public class User : IdentityUser
     {
         [Key]
         public Guid Id { get; set; }
@@ -19,8 +20,6 @@ namespace HealthOS.Models
         [Required]
         public string Gender { get; set; }
 
-        [DataType(DataType.ImageUrl)]
-        [Display(Name = "Image")]
         public string ImageUrl { get; set; }
 
         [Required]

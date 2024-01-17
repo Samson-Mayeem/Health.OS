@@ -10,8 +10,4 @@
     <ProjectReference Include="..\HealthOS.Models\HealthOS.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UnitOfWork\" />
-  </ItemGroup>
-
 </Project>

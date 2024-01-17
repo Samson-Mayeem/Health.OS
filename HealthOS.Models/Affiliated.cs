@@ -7,10 +7,8 @@ namespace HealthOS.Models
     {
         [Key]
         public Guid Id { get; set; }
-
         [Required]
         public Guid DepartmentId { get; set; }
-
         [ForeignKey("DepartmentId")]
         public Department Department { get; set; }
         public Guid StaffId { get; set; }
