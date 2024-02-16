@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HealthOS.Models.Users;
 
 namespace HealthOS.Models
 {
@@ -20,11 +21,10 @@ namespace HealthOS.Models
         [ForeignKey("PatientId")]
         public Patient Patients { get; set; }
 
-        [ForeignKey("StaffId")]
         public User Staff { get; set; }
 
         [Required]
-        [Display(Name = "Nurse ID")]
+        [ForeignKey("StaffId")]
         public Guid StaffId { get; set; }
 
         [Display(Name = "Room Usage ID")]

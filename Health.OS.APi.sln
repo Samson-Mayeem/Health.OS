@@ -10,11 +10,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.OS.APi", "Health.OS.
 		{F4304BB9-5A75-4A9F-8A01-2BCA1CED0DF1} = {F4304BB9-5A75-4A9F-8A01-2BCA1CED0DF1}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOS.DataAccess", "HealthOS.DataAccess\HealthOS.DataAccess.csproj", "{F4304BB9-5A75-4A9F-8A01-2BCA1CED0DF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthOS.Application", "HealthOS.DataAccess\HealthOS.Application.csproj", "{F4304BB9-5A75-4A9F-8A01-2BCA1CED0DF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOS.Models", "HealthOS.Models\HealthOS.Models.csproj", "{D4F80260-8787-4D7E-AFA2-4245C67563B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthOS.Domain", "HealthOS.Models\HealthOS.Domain.csproj", "{D4F80260-8787-4D7E-AFA2-4245C67563B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOS.Utility", "HealthOS.Utility\HealthOS.Utility.csproj", "{3E378479-DE4B-44C8-A807-BE20508B2B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthOS.Utility", "HealthOS.Utility\HealthOS.Utility.csproj", "{3E378479-DE4B-44C8-A807-BE20508B2B28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{947540B0-85FF-4352-A1B9-3C17D591290F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthOS.Infranstructure", "Health.OS.Infranstructure\HealthOS.Infranstructure.csproj", "{85B67A1D-EE94-4373-9D75-075C07A393F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +42,20 @@ Global
 		{3E378479-DE4B-44C8-A807-BE20508B2B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E378479-DE4B-44C8-A807-BE20508B2B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E378479-DE4B-44C8-A807-BE20508B2B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85B67A1D-EE94-4373-9D75-075C07A393F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B67A1D-EE94-4373-9D75-075C07A393F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B67A1D-EE94-4373-9D75-075C07A393F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85B67A1D-EE94-4373-9D75-075C07A393F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2FEEA76-482B-48F8-8228-5DBB201885F2} = {947540B0-85FF-4352-A1B9-3C17D591290F}
+		{F4304BB9-5A75-4A9F-8A01-2BCA1CED0DF1} = {947540B0-85FF-4352-A1B9-3C17D591290F}
+		{D4F80260-8787-4D7E-AFA2-4245C67563B9} = {947540B0-85FF-4352-A1B9-3C17D591290F}
+		{3E378479-DE4B-44C8-A807-BE20508B2B28} = {947540B0-85FF-4352-A1B9-3C17D591290F}
+		{85B67A1D-EE94-4373-9D75-075C07A393F0} = {947540B0-85FF-4352-A1B9-3C17D591290F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {102A3028-53DB-4AE9-A862-C5954EF1B4D7}

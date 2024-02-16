@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using HealthOS.Models.Users;
 
 namespace HealthOS.Models
 {
@@ -8,11 +9,11 @@ namespace HealthOS.Models
         [Key]
         public Guid Id { get; set; }
         [Required]
+        [ForeignKey("Department")]
         public Guid DepartmentId { get; set; }
-        [ForeignKey("DepartmentId")]
         public Department Department { get; set; }
+        [ForeignKey("Doctor")]
         public Guid StaffId { get; set; }
-        [ForeignKey("UserId")]
-        public ICollection<User> Doctors { get; set; }
+        public ICollection<Doctor> Doctors { get; set; }
     }
 }

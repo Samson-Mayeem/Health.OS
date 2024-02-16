@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HealthOS.Models.Users;
 
 namespace HealthOS.Models
 {
@@ -14,21 +15,20 @@ namespace HealthOS.Models
         public int Id { get; set; }
 
         [Required]
-        public int RoomId { get; set; }
+        [ForeignKey("Room")]
+        public Guid RoomId { get; set; }
 
-        [ForeignKey("RoomId")]
         public Room Room { get; set; }
 
         [Required]
-        public DateTime STime { get; set; }
+        public DateTime StartTime { get; set; }
 
         [Required]
-        public DateTime ETime { get; set; }
+        public DateTime EndTime { get; set; }
 
         [Required]
-        public int StaffId { get; set; }
-
-        [ForeignKey("NurseId")]
-        public User Staff { get; set; }
+        [ForeignKey("Doctor")]
+        public Guid DoctorId { get; set; }
+        public Doctor Doctor { get; set; }
     }
 }

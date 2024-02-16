@@ -1,4 +1,6 @@
 ﻿using HealthOS.Models;
+using HealthOS.Models.Users;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Health.OS.APi.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
            : base(options)
@@ -25,8 +27,6 @@ namespace Health.OS.APi.Data
         public DbSet<OnCall> OnCalls { get; set; }
 
         public DbSet<Usage> Usage { get; set; }
-
-        //public DbSet<User> Staff { get; set; }
 
         public DbSet<Appointment> Appointment { get; set; }
 
@@ -44,7 +44,7 @@ namespace Health.OS.APi.Data
 
         public DbSet<UnderGoes> Undergoes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Staff)
@@ -63,7 +63,7 @@ namespace Health.OS.APi.Data
                 .HasOne(a => a.Staff)
                 .WithMany()
                 .HasForeignKey(a => a.DoctorId);
-            modelBuilder.Entity<Prescription>()
+            modelBuilder.Entity<Prescription> ()
                 .HasOne(a => a.Medication)
                 .WithMany()
                 .HasForeignKey(a => a.MedicationId);
@@ -74,6 +74,6 @@ namespace Health.OS.APi.Data
             // Other configurations...
 
             base.OnModelCreating(modelBuilder);
-        }
+        }*/
     }
 }
